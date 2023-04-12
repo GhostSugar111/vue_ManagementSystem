@@ -1,26 +1,71 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="header">
+    XX管理系统
+  </div>
+  <div class="content left">
+    <ul>
+      <li><router-link to="/users">用户管理</router-link></li>
+      <li><router-link to="/rights">权限管理</router-link></li>
+      <li><router-link to="/goods">商品管理</router-link></li>
+      <li><router-link to="/orders">订单管理</router-link></li>
+      <li><router-link to="/settings">系统管理</router-link></li>
+    </ul>
+  </div>
+  <div class="content right">
+    <router-view></router-view>
+  </div> 
+  <div class="footer">
+    版权页
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script >
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style scoped>
+*{
+  margin: 0px;
+  padding:0px;
+}
+.header,.footer{
+  height: 50px;
+  background-color: #ccc;
+  color: white;
+  font-size: 20px;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  line-height: 50px;
+}
+.content{
+  height: 400px;
+  float:left;
+  width: 500px;
+}
+.left{
+  width: 200px;
+  background-color: wheat;
+}
+.left li{
+  list-style: none;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-bottom: thistle;
+  cursor: pointer;/* 鼠标变成手指 */
+}
+.left li a{
+  text-decoration-line: none;
+}
+.left li:hover{
+  background-color: yellowgreen;
+}
+.footer{
+  clear: both;/* 清除浮动 */
 }
 </style>
