@@ -38,14 +38,14 @@ const routes = [
     //         title: '商品管理'
     //     }
     // },
-    // {
-    //     path: 'orders',
-    //     name: 'Order',
-    //     component: () => import('../components/Orders.vue'),
-    //     meta: {
-    //         title: '订单管理'
-    //     }
-    // },
+    {
+        path: '/orders',
+        name: 'Ticket',
+        component: () => import('../components/Movie ticket.vue'),
+        meta: {
+            title: '订单管理'
+        }
+    },
     {
         path: '/settings',
         name: 'Settings',

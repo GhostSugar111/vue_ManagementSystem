@@ -66,6 +66,16 @@ export default {
   background-color: yellowgreen;
 }
 .footer{
-  clear: both;/* 清除浮动 */
+ /*  clear: both;清除浮动 */
+ position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #ccc;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
 }
 </style>
